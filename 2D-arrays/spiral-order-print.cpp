@@ -34,7 +34,7 @@ int main(){
         }
         row_end--;
 
-        // For col_start.
+        // For col_start. 
         for(int row = row_end; row >= row_start; row--){
             cout << arr[row][col_start] << " ";
         }

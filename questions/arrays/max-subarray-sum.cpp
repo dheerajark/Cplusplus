@@ -1,3 +1,4 @@
+// By using cumulative sum.
 #include<iostream>
 #include<climits>
 using namespace std;

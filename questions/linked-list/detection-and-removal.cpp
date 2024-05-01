@@ -45,10 +45,10 @@ bool cycle_detection(node* head){
     node* slow = head;
     node* fast = head;
 
-    while(fast != NULL & fast->next != NULL){
+    while(fast != NULL && fast->next != NULL){
 
-        slow = head->next;
-        fast = head->next->next;
+        slow = slow->next;
+        fast = fast->next->next;
         
         if(slow == fast){
             return true;
@@ -56,6 +56,13 @@ bool cycle_detection(node* head){
     }
     return false;
 }
+
+// void remove_cycle(node* head){
+//     node* slow = head;
+//     node* fast = head;
+
+
+// }
 
 void display(node* head){
     
@@ -77,7 +84,7 @@ int main(){
     insert_at_tail(head, 6);
     insert_at_tail(head, 7);
     make_cycle(head, 3);
-    cycle_detection(head);
+    cout << cycle_detection(head) << endl;
 
     // display(head);
     
